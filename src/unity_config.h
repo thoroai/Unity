@@ -39,7 +39,7 @@
 
 #include <stdint.h>
 #include <stdarg.h>
-#include "debugconsole/debugconsole.h"
+#include <debugconsole.h>
 #include "unity.h"
 #include "board.h"
 /* ************************* AUTOMATIC INTEGER TYPES ***************************
