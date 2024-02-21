@@ -39,7 +39,6 @@
 
 #include <stdint.h>
 #include <stdarg.h>
-#include <debugconsole.h>
 #include "unity.h"
 #include "board.h"
 /* ************************* AUTOMATIC INTEGER TYPES ***************************
@@ -222,7 +221,7 @@
  * `stdout` option. You decide to route your test result output to a custom
  * serial `RS232_putc()` function you wrote like thus:
  */
-#define UNITY_OUTPUT_CHAR(a)                    chprintf(DEBUG_CONSOLE_STREAM, "%c", a);
+#define UNITY_OUTPUT_CHAR(a)                    chprintf((BaseSequentialStream *)&(DEBUG_CONSOLE_SD), "%c", a);
 #define UNITY_OUTPUT_CHAR_HEADER_DECLARATION    chprintf(BaseSequentialStream *chp, const char *fmt, ...);
 //#define UNITY_OUTPUT_FLUSH(s)                   chprintf(DEBUG_CONSOLE_STREAM, "%s", s);
 //#define UNITY_OUTPUT_FLUSH_HEADER_DECLARATION   chprintf(BaseSequentialStream *chp, const char *fmt, ...);
