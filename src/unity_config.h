@@ -40,6 +40,7 @@
 #include <stdint.h>
 #include <stdarg.h>
 #include "unity.h"
+#include <ch.h>
 #include "board.h"
 /* ************************* AUTOMATIC INTEGER TYPES ***************************
  * C's concept of an integer varies from target to target. The C Standard has
